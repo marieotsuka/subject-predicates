@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Subject Predicates</title>
+
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <h1> Subject Predicates</h1>
+        <div id="verbs">
+            <div class="verb selected" id="write">
+                to write
+            </div>
+            <div class="verb" id="speak">
+                to speak
+            </div>
+            <div class="verb" id="vote">
+                to vote
+            </div>
+            <div class="verb" id="support">
+                to support
+            </div>
+            <div class="verb" id="protest">
+                to protest
+            </div>
+            <div class="verb" id="respond">
+                to respond
+            </div>
+            <div class="verb" id="be">
+                to be
+            </div>
+        </div>
+
+        <div id="timeline">
+
+         <div class="labels">
+             <label class="min">1800</label>
+             <label>1850</label>
+             <label>1900</label>
+             <label>1950</label>
+             <label class="max">2000</label>
+         </div>
+         <div id="slider-range"></div>
+
+          <div class="range">
+               <input type="text" id="year" readonly >
+         </div>
+        </div>
+
+       <div id="text">
+           
+       </div>
+       <footer>
+       <p>
+       Using data from the <a href="https://books.google.com/ngrams" target="_blank">Google Books Ngram Viewer</a>, this visualizes the prevalence of particular pronouns when combined with certain actions. The text size of each pronoun-verb pair corresponds to its relative frequency in Google’s archive of scanned English books (~25 million books,) and the timeline can be adjusted to study fluctuations across years. The resulting ratios reflect social norms and developments embedded in published language, including gender, collective/individual, and personal/impersonal associations to activities.
+       </p>
+       </footer>
+    </body>
+</html>
