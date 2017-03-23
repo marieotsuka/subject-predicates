@@ -13,7 +13,7 @@ p {
 footer{
     font-size: .8rem;
     float: right;
-    width: 40%;
+    /*width: 40%;*/
 }
 
 a{
@@ -41,7 +41,7 @@ a:hover{
 }
 
 #text{
-    width: 60%;
+    width: 95%;
     float: left;
     line-height: .9;
     margin-bottom: 2rem;
@@ -55,7 +55,7 @@ a:hover{
 .labels{
     display: flex;
     justify-content: space-between;
-    width: 102.5%;
+    width: 100%;
     margin-bottom: .5rem; 
 }
 
@@ -80,7 +80,7 @@ label{
 }
 
 #slider-range{
-    width: 100%;
+    width: 99%;
 }
 
 .ui-widget-content .ui-state-default{

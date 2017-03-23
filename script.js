@@ -1,6 +1,3 @@
-function add(a, b) {
-    return a + b;
-}
 
 var selectedVerb = "write";
 var ngrams = [];
