@@ -13,20 +13,61 @@ $(document).ready(function(){
 
     getData().done(processData);
 
-    $( "#slider-range" ).slider({
-          range: true,
-          min: 1800,
-          max: 2000,
-          values: [ 1850, 1950 ],
-          slide: function( event, ui ) {
-            $( "#year" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
-            year1 = ui.values[ 0 ]-1800;
-            year2 = ui.values[ 1 ]-1800;
-            computeSum();
-          }
+    var slider = document.getElementById('slider-range');
+
+    noUiSlider.create(slider, {
+            start: [ 1850, 1950 ],
+            connect: true,
+            range: {
+                'min': [ 1800 ],
+                'max': [ 2000 ]
+            },
+            behaviour: 'tap-drag', 
+            format: wNumb({
+                decimals: 0
+            })        
         });
 
-    $( "#year" ).val( $( "#slider-range" ).slider( "values", 0 ) + " - " + $( "#slider-range" ).slider( "values", 1 ) );
+
+
+    // var values = [
+    //     $('.noUi-handle-upper').attr('aria-valuetext'),
+    //     $('.noUi-handle-lower').attr('aria-valuetext')
+    // ]
+
+    var valuesDivs = [
+        document.getElementById('range-value-1'),
+        document.getElementById('range-value-2')
+    ];
+
+    var diffDivs = [
+        document.getElementById('range-diff-1'),
+    ];
+
+    // When the slider value changes, update the input and span
+    slider.noUiSlider.on('update', function( values, handle ) {
+        valuesDivs[handle].innerHTML = values[handle];
+        year1 = values[0]-1800;
+        year2 = values[1]-1800;
+        computeSum();
+    });
+
+
+
+    // $( "#slider-range" ).slider({
+    //       range: true,
+    //       min: 1800,
+    //       max: 2000,
+    //       values: [ 1850, 1950 ],
+    //       slide: function( event, ui ) {
+    //         $( "#year" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+    //         year1 = ui.values[ 0 ]-1800;
+    //         year2 = ui.values[ 1 ]-1800;
+    //         computeSum();
+    //       }
+    //     });
+
+    // $( "#year" ).val( $( "#slider-range" ).slider( "values", 0 ) + " - " + $( "#slider-range" ).slider( "values", 1 ) );
 
     $(".verb").click(function(){
         $("#text").empty();
@@ -79,6 +120,14 @@ $(document).ready(function(){
             $(this).css('font-size', textsize+'px');
         });    
     }
+
+    $('#about').click(function(){
+        $('footer').addClass('show');
+    });
+
+    $('footer').click(function(){
+        $(this).removeClass('show');
+    });
 
 
 
