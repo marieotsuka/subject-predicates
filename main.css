@@ -1,7 +1,7 @@
 body{
     font-family: Helvetica, sans-serif;
     font-weight: bold;
-    margin: 0 40px 0 15px;
+    margin: 0 3rem 2rem 1rem;
     font-size: 16px;
 }
 
@@ -150,4 +150,15 @@ div.noUi-active{
 
 .max{
     float: right;
+}
+
+
+@media screen and (max-width: 600px){
+    #about{
+        float: left;
+        margin: 0 0 2rem 0;
+    }
+    body{
+        margin: 0 1rem;
+    }
 }
