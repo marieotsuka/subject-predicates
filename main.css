@@ -1,6 +1,5 @@
 body{
     font-family: Helvetica, sans-serif;
-    font-weight: bold;
     margin: 0 3rem 2rem 1rem;
     font-size: 16px;
 }
@@ -8,6 +7,7 @@ body{
 h1{
     float: left;
     font-size: 2rem;
+    font-weight: bold;
 }
 
 #about{
@@ -87,7 +87,7 @@ a:hover{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: .5rem; 
+    margin-bottom: .8rem; 
 }
 
 
@@ -106,7 +106,6 @@ label{
 
 #year{
     margin: 1rem 0;
-    font-weight: bold;
     font-size: 2rem;
 }
 
@@ -142,7 +141,21 @@ div.noUi-active{
     cursor: -webkit-grabbing;
 }
 
+.noUi-horizontal {
+    height: 10px;
+}
+.noUi-target{
+    box-shadow: none;
+    border: 0;
+}
 
+.noUi-horizontal .noUi-handle{
+    top: -10px;
+}
+
+.noUi-handle:after, .noUi-handle:before{
+    background: black;
+}
 
 .min{
     float: left;
