@@ -6,13 +6,16 @@ body{
 
 h1{
     float: left;
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: normal;
 }
 
 #about{
     float: right;
-    margin-top: 2rem;
+}
+
+h1, #about{
+    margin-top: 1rem;
 }
 
 p {
